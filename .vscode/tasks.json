@@ -1,0 +1,63 @@
+{
+  // tasks.json 形式の詳細についての資料は、
+  // https://go.microsoft.com/fwlink/?LinkId=733558 をご覧ください
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "parcel",
+      "problemMatcher": [],
+      "presentation": {
+        "focus": true
+      }
+    },
+    {
+      "type": "npm",
+      "script": "start:firefox",
+      "problemMatcher": [],
+      "presentation": {
+        "focus": true
+      }
+    },
+    {
+      "type": "npm",
+      "script": "parcel:popup",
+      "problemMatcher": [],
+      "presentation": {
+        "focus": true
+      }
+    },
+    {
+      "type": "npm",
+      "script": "parcel:content_scripts",
+      "problemMatcher": [],
+      "presentation": {
+        "focus": true
+      }
+    },
+    {
+      "type": "npm",
+      "script": "start",
+      "problemMatcher": [],
+      "presentation": {
+        "focus": true
+      }
+    },
+    {
+      "type": "npm",
+      "script": "del:content_scripts",
+      "problemMatcher": [],
+      "presentation": {
+        "focus": true
+      }
+    },
+    {
+      "type": "npm",
+      "script": "rd:cache",
+      "problemMatcher": [],
+      "presentation": {
+        "focus": true
+      }
+    }
+  ]
+}
