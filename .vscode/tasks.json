@@ -45,14 +45,6 @@
     },
     {
       "type": "npm",
-      "script": "del:content_scripts",
-      "problemMatcher": [],
-      "presentation": {
-        "focus": true
-      }
-    },
-    {
-      "type": "npm",
       "script": "rd:cache",
       "problemMatcher": [],
       "presentation": {
