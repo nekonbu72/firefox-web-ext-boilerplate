@@ -2,11 +2,15 @@
   "name": "firefox-web-ext-boilerplate",
   "version": "1.0.0",
   "scripts": {
-    "rd:cache": "rd \".cache\\\" /q /s",
     "start": "npm run parcel && npm run start:firefox",
-    "parcel": "npm run parcel:content_scripts && npm run parcel:popup",
-    "parcel:content_scripts": "rd addon\\content_scripts /q /s && parcel build content_scripts/beastify.js -d addon/content_scripts --experimental-scope-hoisting --no-minify --no-source-maps",
-    "parcel:popup": "rd addon\\popup /q /s && parcel build popup/choose_beast.html -d addon/popup --public-url ./ --no-minify --no-source-maps",
+    "parcel:clean": "npm run rmdir && npm run parcel",
+    "rmdir": "npm run rmdir:cache & npm run rmdir:background_scripts & npm run rmdir:popup",
+    "rmdir:cache": "rd \".cache\\\" /q /s",
+    "rmdir:background_scripts": "rd addon\\background_scripts /q /s",
+    "rmdir:popup": "rd addon\\popup /q /s",
+    "parcel": "npm run parcel:background_scripts & npm run parcel:popup",
+    "parcel:background_scripts": "parcel build background_scripts/background.js -d addon/background_scripts --experimental-scope-hoisting --no-minify --no-source-maps",
+    "parcel:popup": "parcel build popup/index.html -d addon/popup --public-url ./",
     "start:firefox": "web-ext run --firefox \"C:\\Program Files\\Mozilla Firefox\\firefox.exe\" --source-dir ./addon/"
   },
   "dependencies": {},
@@ -16,5 +20,5 @@
     "parcel": "^1.12.3",
     "web-ext": "^3.1.0"
   },
-  "license": "ISC"
+  "license": "MIT"
 }

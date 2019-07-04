@@ -29,7 +29,7 @@
     },
     {
       "type": "npm",
-      "script": "parcel:content_scripts",
+      "script": "parcel:background_scripts",
       "problemMatcher": [],
       "presentation": {
         "focus": true
@@ -45,7 +45,23 @@
     },
     {
       "type": "npm",
-      "script": "rd:cache",
+      "script": "parcel:clean",
+      "problemMatcher": [],
+      "presentation": {
+        "focus": true
+      }
+    },
+    {
+      "type": "npm",
+      "script": "rmdir:popup",
+      "problemMatcher": [],
+      "presentation": {
+        "focus": true
+      }
+    },
+    {
+      "type": "npm",
+      "script": "rmdir:cache",
       "problemMatcher": [],
       "presentation": {
         "focus": true

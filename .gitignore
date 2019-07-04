@@ -1,4 +1,5 @@
 node_modules
 .cache
 addon/content_scripts
+addon/background_scripts
 addon/popup
