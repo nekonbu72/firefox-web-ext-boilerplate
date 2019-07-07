@@ -2,23 +2,20 @@
   "name": "firefox-web-ext-boilerplate",
   "version": "1.0.0",
   "scripts": {
-    "start": "npm run parcel && npm run start:firefox",
-    "parcel:clean": "npm run rmdir && npm run parcel",
-    "rmdir": "npm run rmdir:cache & npm run rmdir:background_scripts & npm run rmdir:popup",
-    "rmdir:cache": "rd \".cache\\\" /q /s",
-    "rmdir:background_scripts": "rd addon\\background_scripts /q /s",
-    "rmdir:popup": "rd addon\\popup /q /s",
-    "parcel": "npm run parcel:background_scripts & npm run parcel:popup",
-    "parcel:background_scripts": "parcel build background_scripts/background.js -d addon/background_scripts --experimental-scope-hoisting --no-minify --no-source-maps",
-    "parcel:popup": "parcel build popup/index.html -d addon/popup --public-url ./",
-    "start:firefox": "web-ext run --firefox \"C:\\Program Files\\Mozilla Firefox\\firefox.exe\" --source-dir ./addon/"
+    "build": "webpack",
+    "webpack": "webpack --watch",
+    "firefox": "web-ext run --firefox \"C:\\Program Files\\Mozilla Firefox\\firefox.exe\" --source-dir ./addon/"
   },
   "dependencies": {},
   "devDependencies": {
+    "@babel/core": "^7.5.0",
+    "@babel/preset-env": "^7.5.0",
     "@types/firefox-webext-browser": "^67.0.2",
+    "babel-loader": "^8.0.6",
     "eslint": "^6.0.1",
-    "parcel": "^1.12.3",
-    "web-ext": "^3.1.0"
+    "web-ext": "^3.1.0",
+    "webpack": "^4.35.2",
+    "webpack-cli": "^3.3.5"
   },
   "license": "MIT"
 }

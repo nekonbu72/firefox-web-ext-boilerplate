@@ -5,31 +5,7 @@
   "tasks": [
     {
       "type": "npm",
-      "script": "parcel",
-      "problemMatcher": [],
-      "presentation": {
-        "focus": true
-      }
-    },
-    {
-      "type": "npm",
       "script": "start:firefox",
-      "problemMatcher": [],
-      "presentation": {
-        "focus": true
-      }
-    },
-    {
-      "type": "npm",
-      "script": "parcel:popup",
-      "problemMatcher": [],
-      "presentation": {
-        "focus": true
-      }
-    },
-    {
-      "type": "npm",
-      "script": "parcel:background_scripts",
       "problemMatcher": [],
       "presentation": {
         "focus": true
@@ -45,14 +21,6 @@
     },
     {
       "type": "npm",
-      "script": "parcel:clean",
-      "problemMatcher": [],
-      "presentation": {
-        "focus": true
-      }
-    },
-    {
-      "type": "npm",
       "script": "rmdir:popup",
       "problemMatcher": [],
       "presentation": {
@@ -61,7 +29,15 @@
     },
     {
       "type": "npm",
-      "script": "rmdir:cache",
+      "script": "rmdir",
+      "problemMatcher": [],
+      "presentation": {
+        "focus": true
+      }
+    },
+    {
+      "type": "npm",
+      "script": "start:webpack",
       "problemMatcher": [],
       "presentation": {
         "focus": true
